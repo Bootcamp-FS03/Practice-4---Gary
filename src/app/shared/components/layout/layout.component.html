@@ -1,0 +1,17 @@
+<div class="layout">
+  <mat-toolbar class="layout__header">
+    <span>Combi Social</span>
+
+    <button (click)="logout()" mat-raised-button color="primary">Log out<mat-icon>logout</mat-icon></button>
+  </mat-toolbar>
+
+  <div class="layout__content">
+    <main class="layout__main">
+      <ng-content></ng-content>
+    </main>
+
+    <footer class="layout__footer">
+      <a class="link" *ngFor="let link of footerLinks" [routerLink]="link.href">{{ link.label }}</a>
+    </footer>
+  </div>
+</div>

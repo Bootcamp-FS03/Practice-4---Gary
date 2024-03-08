@@ -1,0 +1,30 @@
+<mat-card class="post c c--col c--gap-lg">
+  <div class="post__main">
+    <header class="post__header">
+      <div class="c c--row">
+        <div class="post__avatar">{{ post.author.username[0] }}</div>
+
+        <div class="c c--col c--gap-sm">
+          <a class="post__link"> {{ post.author.username }}</a>
+          <mat-card-subtitle>
+            {{ post.updatedAt | date }}
+          </mat-card-subtitle>
+        </div>
+      </div>
+    </header>
+    <div class="post__content">
+      <p class="post__text">{{ post.text }}</p>
+    </div>
+  </div>
+  <div class="post__actions">
+   <div>
+    <button mat-button (click)="commentPost()">Comment</button>
+    <button mat-raised-button color="primary" (click)="getCommentsFromPost();">View Comments</button>
+   </div>
+    
+    <div *ngIf="(profileService.profile$ | async)?._id === post.author._id">
+      <button mat-button color="accent" (click)="showEditModal()">Edit</button>
+      <button mat-raised-button color="accent" (click)="showDeleteModal()" >Remove</button>
+    </div>
+  </div>
+</mat-card>

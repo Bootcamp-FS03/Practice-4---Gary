@@ -1,0 +1,5 @@
+@profile_url = {{api_url}}/user/profile
+
+GET {{profile_url}} HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}

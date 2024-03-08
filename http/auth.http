@@ -1,0 +1,9 @@
+@auth_url = {{api_url}}/auth
+
+POST {{auth_url}}/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}

@@ -1,0 +1,4 @@
+<div class="main">
+  <fs-post-form />
+  <fs-post *ngFor="let post of posts$ | async; trackBy: postTrackByFn" [post]="post" />
+</div>

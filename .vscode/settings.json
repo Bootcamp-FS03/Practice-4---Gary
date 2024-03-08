@@ -1,0 +1,8 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoiNjVkOGRmNjk3ZjkyZjNmN2QxM2MzYmVmIiwiaWF0IjoxNzA4OTcxNDE5LCJleHAiOjE3MDg5NzUwMTl9._RTvDRkSHlw9NrmKH7f5NDMXU2UZofvqUi6hhOxgjFc",
+      "api_url": "http://localhost:3000"
+    }
+  }
+}

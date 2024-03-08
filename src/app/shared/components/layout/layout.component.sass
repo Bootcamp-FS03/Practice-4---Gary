@@ -1,0 +1,50 @@
+$max-width: 768px
+
+@mixin layout-content
+  box-sizing: border-box
+  max-width: $max-width
+  width: 100%
+  padding: 0 16px
+
+.layout
+  position: relative
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  flex-direction: column
+
+  &__header
+    @include layout-content
+    flex-shrink: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    background-color: white
+
+  &__content
+    @include layout-content
+    max-height: 100%
+    overflow-y: auto
+
+  &__main
+    flex: 1 1 0
+
+  &__footer
+    flex-shrink: 0
+    display: flex
+    justify-content: center
+    gap: 1rem
+    padding: 2rem 0
+    margin: 0 4rem
+
+.link
+  font-size: 0.9rem
+  color: #7575a1
+  text-decoration: none
+  text-align: center
+
+  &:hover
+    text-decoration: underline
+    color: #222

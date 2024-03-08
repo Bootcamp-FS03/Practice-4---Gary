@@ -1,0 +1,30 @@
+<div class="register-container">
+  <div>
+    <h2>Register</h2>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" />
+        <mat-error *ngIf="registerForm.get('username')?.invalid">{{ getErrorMessage('username') }}</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" formControlName="pass" />
+        <mat-error *ngIf="registerForm.get('pass')?.invalid">{{ getErrorMessage('pass') }}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm password</mat-label>
+        <input type="password" matInput placeholder="confirmPassword" formControlName="confirmPass" />
+        <mat-error *ngIf="registerForm.get('confirmPass')?.invalid">{{ getErrorMessage('confirmPass') }}</mat-error>
+      </mat-form-field>
+    </div>
+    <br />
+    <button mat-raised-button type="submit">register</button>
+  </form>
+
+  <a routerLink="/login">Go to login</a> 
+  
+</div>
